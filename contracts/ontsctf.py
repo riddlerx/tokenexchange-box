@@ -19,6 +19,7 @@ import re
 
 def main(argv):
    try:
+      print(argv)
       opts, args = getopt.getopt(argv, "hm:i:c:f:", ["migrate=", "invoke=", "compile", "function"])
    except getopt.GetoptError:
       print('ontsctf.py [-m|--migrate] [-i|--invoke] [-c|--compile]')
@@ -150,7 +151,8 @@ def invoke_cmd(m: [], arg: str):
 
 def execute(m:[], function_name=None):
     sdk = OntologySdk()
-    sdk.set_rpc(m["rpc_address"])
+    sdk.set_rpc_address(m["rpc_address"])
+
     if m["func"] is "migrate":
         deploy(sdk, m)
     elif m["func"] is "invoke":
@@ -472,4 +474,15 @@ def save_file(m: [], res: str, func_l = None):
 
 
 if __name__ == "__main__":
-   main(sys.argv[1:])
+    # "sc-compile": "python contracts/ontsctf.py -c contracts/contracts/ExchangeContract.cs",
+    # "sc-deploy": "python contracts/ontsctf.py -m contracts/config/deploy.json",
+    # "sc-invoke": "python contracts/ontsctf.py -i contracts/config/invoke.json"
+    test = True
+    # args = ['-c', 'contracts/ExchangeContract.cs']
+    # args = ['-m', 'config/deploy.json']
+    args = ['-i', 'config/invoke.json']
+    if test:
+        main(args)
+    else:
+        print(sys.argv)
+        main(sys.argv[1:])
