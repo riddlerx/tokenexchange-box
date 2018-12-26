@@ -1,5 +1,5 @@
 {
-    "rpc_address": "http://polaris1.ont.io:20336",
+    "rpc_address": "http://localhost:20336",
     "payer_address": "AHX1wzvdw9Yipk7E9MuLY4GGX4Ym9tHeDe",
     "payer_password": "111111",
     "wallet_file_path": "../wallet/wallet.json",
@@ -19,6 +19,22 @@
                 "signer": {
                     "walletpath": "../wallet/wallet.json",
                     "address": "AHX1wzvdw9Yipk7E9MuLY4GGX4Ym9tHeDe", 
+                    "password": "111111"
+                }
+            },
+            "pre_exec": false
+        },
+        "SetTokenBase": {
+            "function_name": "SetTokenBase",
+            "function_param": {
+                "symbol": "Token2",
+                "value": 2
+            },
+            "signers": {
+                "m": 1,
+                "signer": {
+                    "walletpath": "../wallet/wallet.json",
+                    "address": "AHX1wzvdw9Yipk7E9MuLY4GGX4Ym9tHeDe",
                     "password": "111111"
                 }
             },
