@@ -1,2 +1,4 @@
 No,contract_address,payer_address,gas_limit,gas_price,function_name,pre_exec,params,result
 0,7dffd39e53be06f104f443857f9115ec55212b43,AHX1wzvdw9Yipk7E9MuLY4GGX4Ym9tHeDe,20000,500,SetTokenBase,False,Token1:1,'Address' object has no attribute 'to_array'
+1,7dffd39e53be06f104f443857f9115ec55212b43,AHX1wzvdw9Yipk7E9MuLY4GGX4Ym9tHeDe,20000,500,SetTokenBase,False,Token1:1,'Address' object has no attribute 'to_array'
+2,7dffd39e53be06f104f443857f9115ec55212b43,AHX1wzvdw9Yipk7E9MuLY4GGX4Ym9tHeDe,20000,500,SetTokenBase,False,Token1:1,18563f014c46c14340f797a5b1e5395bf153371a6cbe3b717914825a73e206bb

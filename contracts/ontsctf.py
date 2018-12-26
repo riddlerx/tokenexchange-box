@@ -344,8 +344,8 @@ def handle_tx(contract_address, func_map, param_list, payer, m, sdk):
     for i in contract_address:
         params.append(i)
     tx = Transaction(0, 0xd1, unix_time_now, m["gas_price"], m["gas_limit"],
-                     payer.get_address().to_array(),
-                     params, bytearray(), [], bytearray())
+                     payer.get_address().to_bytearray(),
+                     params, bytearray(), [])
     sdk.add_sign_transaction(tx, payer)
     path_addr = []
     if type(func_map["signers"]) is dict:
