@@ -4,6 +4,8 @@ import os
 import sys, getopt
 from time import time
 import time as time2
+import urllib3
+
 from collections import namedtuple
 
 from ontology.account.account import Account
@@ -16,6 +18,7 @@ from ontology.smart_contract.neo_vm import NeoVm
 import requests
 import re
 
+urllib3.disable_warnings()
 
 def main(argv):
    try:
@@ -478,9 +481,9 @@ if __name__ == "__main__":
     # "sc-deploy": "python contracts/ontsctf.py -m contracts/config/deploy.json",
     # "sc-invoke": "python contracts/ontsctf.py -i contracts/config/invoke.json"
     test = True
-    # args = ['-c', 'contracts/ExchangeContract.cs']
+    args = ['-c', 'contracts/NativeAssetInvoke.py']
     # args = ['-m', 'config/deploy.json']
-    args = ['-i', 'config/invoke.json']
+    # args = ['-i', 'config/invoke.json']
     if test:
         main(args)
     else:

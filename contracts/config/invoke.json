@@ -1,5 +1,5 @@
 {
-    "rpc_address": "http://localhost:20336",
+    "rpc_address": "http://polaris1.ont.io:20336",
     "payer_address": "AHX1wzvdw9Yipk7E9MuLY4GGX4Ym9tHeDe",
     "payer_password": "111111",
     "wallet_file_path": "../wallet/wallet.json",
@@ -11,24 +11,44 @@
         "SetTokenBase": {
             "function_name": "SetTokenBase",
             "function_param": {
-                "symbol": "Token1",
-                "value": 1
+                "symbol": "ONG",
+                "value": 2
             },
-            "signers": { 
-                "m": 1, 
+            "signers": {
+                "m": 1,
                 "signer": {
                     "walletpath": "../wallet/wallet.json",
-                    "address": "AHX1wzvdw9Yipk7E9MuLY4GGX4Ym9tHeDe", 
+                    "address": "AHX1wzvdw9Yipk7E9MuLY4GGX4Ym9tHeDe",
                     "password": "111111"
                 }
             },
             "pre_exec": false
         },
-        "SetTokenBase": {
-            "function_name": "SetTokenBase",
+
+        "GetTokenBase": {
+            "function_name": "GetTokenBase",
             "function_param": {
-                "symbol": "Token2",
-                "value": 2
+                "symbol": "ONG"
+            },
+            "signers": {
+                "m": 1,
+                "signer": {
+                    "walletpath": "../wallet/wallet.json",
+                    "address": "AHX1wzvdw9Yipk7E9MuLY4GGX4Ym9tHeDe",
+                    "password": "111111"
+                }
+            },
+            "pre_exec": false
+        },
+
+        "Exchange": {
+            "function_name": "Exchange",
+            "function_param": {
+                "from": "41485831777a766477395969706b3745394d754c593447475834596d397448654465",
+                "to": "41466d73655672644c3966396f79437a5a65664c397447365562766945483975674b",
+                "fromSymbol": "ONG",
+                "toSymbol": "ONG",
+                "value": 12000000
             },
             "signers": {
                 "m": 1,
